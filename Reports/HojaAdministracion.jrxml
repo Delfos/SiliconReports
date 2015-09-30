@@ -138,9 +138,22 @@
 	<group name="tratamientos" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
 		<groupExpression><![CDATA[$F{idTratamiento}.toString()+$F{fechaInicio}]]></groupExpression>
 		<groupHeader>
-			<band height="135" splitType="Stretch">
+			<band height="166" splitType="Stretch">
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-70" mode="Opaque" x="15" y="72" width="88" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-71" mode="Opaque" x="255" y="108" width="68" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
+						<font fontName="Liberation Sans" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("amb.diagnostico")]]></textFieldExpression>
+				</textField>
+				<textField pattern="" isBlankWhenNull="false">
+					<reportElement key="element-70" mode="Opaque" x="15" y="108" width="88" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -153,7 +166,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("pa.alergias")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-25" positionType="FixRelativeToBottom" mode="Transparent" x="15" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="textField-25" positionType="FixRelativeToBottom" mode="Transparent" x="15" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -166,7 +179,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia0}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-26" positionType="FixRelativeToBottom" mode="Transparent" x="103" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-26" positionType="FixRelativeToBottom" mode="Transparent" x="103" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia4}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -181,7 +194,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia4}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-27" positionType="FixRelativeToBottom" mode="Transparent" x="125" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-27" positionType="FixRelativeToBottom" mode="Transparent" x="125" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia5}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -196,7 +209,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia5}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-28" positionType="FixRelativeToBottom" mode="Transparent" x="147" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-28" positionType="FixRelativeToBottom" mode="Transparent" x="147" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia6}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -211,7 +224,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia6}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-29" positionType="FixRelativeToBottom" mode="Transparent" x="169" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-29" positionType="FixRelativeToBottom" mode="Transparent" x="169" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia7}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -226,7 +239,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia7}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-30" positionType="FixRelativeToBottom" mode="Transparent" x="191" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-30" positionType="FixRelativeToBottom" mode="Transparent" x="191" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia8}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -241,7 +254,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia8}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-31" positionType="FixRelativeToBottom" mode="Transparent" x="213" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-31" positionType="FixRelativeToBottom" mode="Transparent" x="213" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia9}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -256,7 +269,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia9}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-32" positionType="FixRelativeToBottom" mode="Transparent" x="235" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-32" positionType="FixRelativeToBottom" mode="Transparent" x="235" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia10}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -271,7 +284,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia10}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-33" positionType="FixRelativeToBottom" mode="Transparent" x="257" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-33" positionType="FixRelativeToBottom" mode="Transparent" x="257" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia11}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -286,7 +299,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia11}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-34" positionType="FixRelativeToBottom" mode="Transparent" x="279" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-34" positionType="FixRelativeToBottom" mode="Transparent" x="279" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia12}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -301,7 +314,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia12}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-35" positionType="FixRelativeToBottom" mode="Transparent" x="301" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-35" positionType="FixRelativeToBottom" mode="Transparent" x="301" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia13}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -316,7 +329,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia13}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-36" positionType="FixRelativeToBottom" mode="Transparent" x="323" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-36" positionType="FixRelativeToBottom" mode="Transparent" x="323" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia14}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -331,7 +344,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia14}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-37" positionType="FixRelativeToBottom" mode="Transparent" x="345" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-37" positionType="FixRelativeToBottom" mode="Transparent" x="345" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia15}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -346,7 +359,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia15}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-38" positionType="FixRelativeToBottom" mode="Transparent" x="367" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-38" positionType="FixRelativeToBottom" mode="Transparent" x="367" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia16}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -361,7 +374,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia16}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-39" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-39" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia17}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -376,7 +389,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia17}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-40" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-40" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia18}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -391,7 +404,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia18}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-41" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-41" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia19}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -406,7 +419,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia19}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-42" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-42" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia20}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -421,7 +434,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia20}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-43" positionType="FixRelativeToBottom" mode="Transparent" x="37" y="102" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-43" positionType="FixRelativeToBottom" mode="Transparent" x="37" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia1}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -436,7 +449,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia1}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-44" positionType="FixRelativeToBottom" mode="Transparent" x="59" y="102" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-44" positionType="FixRelativeToBottom" mode="Transparent" x="59" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia2}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -451,7 +464,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia2}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-45" positionType="FixRelativeToBottom" mode="Transparent" x="81" y="102" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-45" positionType="FixRelativeToBottom" mode="Transparent" x="81" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia3}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -466,7 +479,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia3}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-46" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-46" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia23}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -481,7 +494,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia23}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-47" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-47" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia22}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -496,7 +509,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia22}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-48" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-48" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia21}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -511,7 +524,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia21}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="textField-49" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="111" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
+					<reportElement key="textField-49" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="142" width="88" height="11" forecolor="#000000" backcolor="#FFFFFF">
 						<printWhenExpression><![CDATA[new Boolean(!$F{dia20}.equals(""))]]></printWhenExpression>
 					</reportElement>
 					<box>
@@ -526,7 +539,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{dia20}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-57" mode="Opaque" x="446" y="3" width="16" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-57" mode="Opaque" x="143" y="69" width="17" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -539,7 +552,7 @@
 					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-58" mode="Opaque" x="390" y="3" width="51" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-58" mode="Opaque" x="92" y="69" width="51" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -552,7 +565,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("gral.hoja")+":"]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-59" mode="Opaque" x="462" y="3" width="7" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-59" mode="Opaque" x="160" y="69" width="7" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -565,7 +578,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA["/"]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="tratamientos" pattern="" isBlankWhenNull="false">
-					<reportElement key="element-60" mode="Opaque" x="469" y="3" width="21" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-60" mode="Opaque" x="167" y="69" width="21" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -577,8 +590,79 @@
 					</textElement>
 					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
+				<elementGroup>
+					<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+						<reportElement key="textField-54" mode="Transparent" x="250" y="1" width="296" height="17" forecolor="#000000" backcolor="#FFFFFF"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
+							<font fontName="Liberation Sans" size="13" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{apellidoPaciente}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
+				<elementGroup>
+					<line>
+						<reportElement key="line-5" positionType="Float" mode="Opaque" x="217" y="38" width="320" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
+						<graphicElement fill="Solid">
+							<pen lineWidth="0.5" lineStyle="Solid"/>
+						</graphicElement>
+					</line>
+				</elementGroup>
+				<elementGroup>
+					<line>
+						<reportElement key="line-6" positionType="Float" mode="Opaque" x="217" y="54" width="320" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
+						<graphicElement fill="Solid">
+							<pen lineWidth="0.5" lineStyle="Solid"/>
+						</graphicElement>
+					</line>
+				</elementGroup>
+				<elementGroup>
+					<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+						<reportElement key="textField-55" positionType="Float" mode="Transparent" x="250" y="20" width="296" height="17" forecolor="#000000" backcolor="#FFFFFF"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
+							<font fontName="Liberation Sans" size="13" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{nombrePaciente}+" ("+$F{nhc}+")"]]></textFieldExpression>
+					</textField>
+				</elementGroup>
+				<elementGroup>
+					<elementGroup>
+						<line>
+							<reportElement key="line-8" positionType="Float" mode="Opaque" x="217" y="70" width="320" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
+							<graphicElement fill="Solid">
+								<pen lineWidth="0.5" lineStyle="Solid"/>
+							</graphicElement>
+						</line>
+					</elementGroup>
+				</elementGroup>
+				<elementGroup>
+					<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+						<reportElement key="textField-56" positionType="Float" mode="Transparent" x="250" y="40" width="117" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
+							<font fontName="Liberation Sans" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{cama}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
 				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-58" positionType="Float" mode="Transparent" x="542" y="24" width="8" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="textField-58" positionType="Float" mode="Transparent" x="527" y="41" width="8" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -591,13 +675,28 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{sexo}]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement key="line-9" positionType="Float" mode="Opaque" x="14" y="99" width="529" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="line-9" positionType="Float" mode="Opaque" x="14" y="130" width="529" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
 					<graphicElement fill="Solid">
 						<pen lineWidth="0.5" lineStyle="Solid"/>
 					</graphicElement>
 				</line>
+				<elementGroup>
+					<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+						<reportElement key="textField-61" positionType="Float" mode="Transparent" x="416" y="40" width="85" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
+							<font fontName="Liberation Sans" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaNacimiento}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
 				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-63" positionType="Float" mode="Transparent" x="14" y="85" width="233" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="textField-63" positionType="Float" mode="Transparent" x="14" y="119" width="233" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -610,7 +709,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{alergias}]]></textFieldExpression>
 				</textField>
 				<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
-					<reportElement key="element-61" mode="Opaque" x="528" y="5" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-61" mode="Opaque" x="15" y="17" width="120" height="40" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -622,8 +721,36 @@
 					</graphicElement>
 					<imageExpression class="java.lang.String"><![CDATA[$P{dir_logo}]]></imageExpression>
 				</image>
+				<elementGroup>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="textField-65" positionType="Float" x="250" y="56" width="188" height="13"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="Liberation Sans" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{nombreCompletoMedico}]]></textFieldExpression>
+					</textField>
+					<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+						<reportElement key="textField-66" positionType="Float" x="466" y="56" width="81" height="13"/>
+						<box>
+							<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+							<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						</box>
+						<textElement verticalAlignment="Bottom">
+							<font fontName="Liberation Sans" isBold="true" pdfFontName="Helvetica-Bold"/>
+						</textElement>
+						<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoUnidadEnfermeria}]]></textFieldExpression>
+					</textField>
+				</elementGroup>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-62" mode="Opaque" x="2" y="28" width="51" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-62" mode="Opaque" x="196" y="8" width="51" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -636,7 +763,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("ce.apellidos")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-63" mode="Opaque" x="198" y="27" width="51" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-63" mode="Opaque" x="196" y="26" width="51" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -649,7 +776,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("amb.nombre")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-64" mode="Opaque" x="8" y="43" width="33" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-64" mode="Opaque" x="196" y="43" width="51" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -662,7 +789,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("di.cama")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-65" positionType="Float" mode="Opaque" x="3" y="58" width="44" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-65" positionType="Float" mode="Opaque" x="203" y="59" width="44" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -675,7 +802,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("pa.medico")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-66" mode="Opaque" x="412" y="26" width="45" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-66" mode="Opaque" x="369" y="43" width="45" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -688,7 +815,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("pa.fecha_nac")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-67" mode="Opaque" x="518" y="26" width="24" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-67" mode="Opaque" x="501" y="43" width="24" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -701,7 +828,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("pa.sexo")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-68" positionType="Float" mode="Opaque" x="100" y="42" width="24" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-68" positionType="Float" mode="Opaque" x="440" y="59" width="24" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -714,7 +841,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("dis.uenf")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-69" mode="Opaque" x="2" y="2" width="366" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-69" mode="Opaque" x="14" y="93" width="529" height="15" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -727,13 +854,13 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("dos.registroEnfermeria")]]></textFieldExpression>
 				</textField>
 				<line>
-					<reportElement key="line-13" positionType="Float" mode="Opaque" x="1" y="20" width="366" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="line-13" positionType="Float" mode="Opaque" x="217" y="86" width="320" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
 					<graphicElement fill="Solid">
 						<pen lineWidth="0.5" lineStyle="Solid"/>
 					</graphicElement>
 				</line>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="textField-74" positionType="Float" x="311" y="55" width="166" height="13"/>
+					<reportElement key="textField-74" positionType="Float" x="250" y="72" width="70" height="13"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -746,7 +873,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoServicio}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-75" positionType="Float" mode="Opaque" x="260" y="58" width="44" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-75" positionType="Float" mode="Opaque" x="203" y="75" width="44" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -759,7 +886,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("amb.servicio")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-76" positionType="Float" mode="Opaque" x="181" y="43" width="49" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-76" positionType="Float" mode="Opaque" x="316" y="75" width="49" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -772,7 +899,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("tr.confirmadoHasta")]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-77" positionType="Float" mode="Opaque" x="336" y="43" width="43" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="element-77" positionType="Float" mode="Opaque" x="430" y="75" width="43" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -785,7 +912,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("tr.validoHasta")]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="textField-75" positionType="Float" x="237" y="40" width="65" height="13"/>
+					<reportElement key="textField-75" positionType="Float" x="366" y="72" width="76" height="13"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -798,7 +925,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{confirmado}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="textField-76" positionType="Float" x="384" y="40" width="64" height="13"/>
+					<reportElement key="textField-76" positionType="Float" x="474" y="72" width="76" height="13"/>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -811,7 +938,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{validado}]]></textFieldExpression>
 				</textField>
 				<rectangle>
-					<reportElement key="turno3-24" positionType="FixRelativeToBottom" mode="Opaque" x="521" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-24" positionType="FixRelativeToBottom" mode="Opaque" x="521" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora23}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora23}).intValue() <= $P{turno3_fin}.intValue()
@@ -822,7 +949,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-23" positionType="FixRelativeToBottom" mode="Opaque" x="499" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-23" positionType="FixRelativeToBottom" mode="Opaque" x="499" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora22}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora22}).intValue() <= $P{turno3_fin}.intValue()
@@ -833,7 +960,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-22" positionType="FixRelativeToBottom" mode="Opaque" x="477" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-22" positionType="FixRelativeToBottom" mode="Opaque" x="477" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora21}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora21}).intValue() <= $P{turno3_fin}.intValue()
@@ -844,7 +971,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-21" positionType="FixRelativeToBottom" mode="Opaque" x="455" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-21" positionType="FixRelativeToBottom" mode="Opaque" x="455" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora20}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora20}).intValue() <= $P{turno3_fin}.intValue()
@@ -855,7 +982,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-20" positionType="FixRelativeToBottom" mode="Opaque" x="434" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-20" positionType="FixRelativeToBottom" mode="Opaque" x="434" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora19}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora19}).intValue() <= $P{turno3_fin}.intValue()
@@ -866,7 +993,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-19" positionType="FixRelativeToBottom" mode="Opaque" x="412" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-19" positionType="FixRelativeToBottom" mode="Opaque" x="412" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora18}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora18}).intValue() <= $P{turno3_fin}.intValue()
@@ -877,7 +1004,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-18" positionType="FixRelativeToBottom" mode="Opaque" x="390" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-18" positionType="FixRelativeToBottom" mode="Opaque" x="390" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora17}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora17}).intValue() <= $P{turno3_fin}.intValue()
@@ -888,7 +1015,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-17" positionType="FixRelativeToBottom" mode="Opaque" x="368" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-17" positionType="FixRelativeToBottom" mode="Opaque" x="368" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora16}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora16}).intValue() <= $P{turno3_fin}.intValue()
@@ -899,7 +1026,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-16" positionType="FixRelativeToBottom" mode="Opaque" x="345" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-16" positionType="FixRelativeToBottom" mode="Opaque" x="345" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora15}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora15}).intValue() <= $P{turno3_fin}.intValue()
@@ -910,7 +1037,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-15" positionType="FixRelativeToBottom" mode="Opaque" x="323" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-15" positionType="FixRelativeToBottom" mode="Opaque" x="323" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora14}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora14}).intValue() <= $P{turno3_fin}.intValue()
@@ -921,7 +1048,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-14" positionType="FixRelativeToBottom" mode="Opaque" x="301" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-14" positionType="FixRelativeToBottom" mode="Opaque" x="301" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora13}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora13}).intValue() <= $P{turno3_fin}.intValue()
@@ -932,7 +1059,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-13" positionType="FixRelativeToBottom" mode="Opaque" x="279" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-13" positionType="FixRelativeToBottom" mode="Opaque" x="279" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora12}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora12}).intValue() <= $P{turno3_fin}.intValue()
@@ -943,7 +1070,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-12" positionType="FixRelativeToBottom" mode="Opaque" x="257" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-12" positionType="FixRelativeToBottom" mode="Opaque" x="257" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora11}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora11}).intValue() <= $P{turno3_fin}.intValue()
@@ -954,7 +1081,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-11" positionType="FixRelativeToBottom" mode="Opaque" x="235" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-11" positionType="FixRelativeToBottom" mode="Opaque" x="235" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora10}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora10}).intValue() <= $P{turno3_fin}.intValue()
@@ -965,7 +1092,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-10" positionType="FixRelativeToBottom" mode="Opaque" x="213" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-10" positionType="FixRelativeToBottom" mode="Opaque" x="213" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora9}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora9}).intValue() <= $P{turno3_fin}.intValue()
@@ -976,7 +1103,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-9" positionType="FixRelativeToBottom" mode="Opaque" x="191" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-9" positionType="FixRelativeToBottom" mode="Opaque" x="191" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora8}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora8}).intValue() <= $P{turno3_fin}.intValue()
@@ -987,7 +1114,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-8" positionType="FixRelativeToBottom" mode="Opaque" x="169" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-8" positionType="FixRelativeToBottom" mode="Opaque" x="169" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora7}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora7}).intValue() <= $P{turno3_fin}.intValue()
@@ -998,7 +1125,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-7" positionType="FixRelativeToBottom" mode="Opaque" x="147" y="121" width="22" height="14" isRemoveLineWhenBlank="true" backcolor="#909090">
+					<reportElement key="turno3-7" positionType="FixRelativeToBottom" mode="Opaque" x="147" y="153" width="22" height="11" isRemoveLineWhenBlank="true" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora6}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora6}).intValue() <= $P{turno3_fin}.intValue()
@@ -1009,7 +1136,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-6" positionType="FixRelativeToBottom" mode="Opaque" x="125" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-6" positionType="FixRelativeToBottom" mode="Opaque" x="125" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora5}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora5}).intValue() <= $P{turno3_fin}.intValue()
@@ -1020,7 +1147,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-5" positionType="FixRelativeToBottom" mode="Opaque" x="103" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-5" positionType="FixRelativeToBottom" mode="Opaque" x="103" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora4}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora4}).intValue() <= $P{turno3_fin}.intValue()
@@ -1031,7 +1158,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-4" positionType="FixRelativeToBottom" mode="Opaque" x="81" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-4" positionType="FixRelativeToBottom" mode="Opaque" x="81" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora3}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora3}).intValue() <= $P{turno3_fin}.intValue()
@@ -1042,7 +1169,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-3" positionType="FixRelativeToBottom" mode="Opaque" x="59" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-3" positionType="FixRelativeToBottom" mode="Opaque" x="59" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora2}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora2}).intValue() <= $P{turno3_fin}.intValue()
@@ -1053,7 +1180,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-2" positionType="FixRelativeToBottom" mode="Opaque" x="37" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-2" positionType="FixRelativeToBottom" mode="Opaque" x="37" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora1}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora1}).intValue() <= $P{turno3_fin}.intValue()
@@ -1064,7 +1191,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno3-1" positionType="FixRelativeToBottom" mode="Opaque" x="15" y="121" width="22" height="14" backcolor="#909090">
+					<reportElement key="turno3-1" positionType="FixRelativeToBottom" mode="Opaque" x="15" y="153" width="22" height="11" backcolor="#909090">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora0}).intValue() >= $P{turno3_inicio}.intValue() &&
 	Integer.valueOf($F{hora0}).intValue() <= $P{turno3_fin}.intValue()
@@ -1075,7 +1202,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-48" positionType="FixRelativeToBottom" mode="Opaque" x="15" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-48" positionType="FixRelativeToBottom" mode="Opaque" x="15" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora0}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora0}).intValue() <= $P{turno2_fin}.intValue()
@@ -1086,7 +1213,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-47" positionType="FixRelativeToBottom" mode="Opaque" x="37" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-47" positionType="FixRelativeToBottom" mode="Opaque" x="37" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora1}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora1}).intValue() <= $P{turno2_fin}.intValue()
@@ -1097,7 +1224,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-46" positionType="FixRelativeToBottom" mode="Opaque" x="59" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-46" positionType="FixRelativeToBottom" mode="Opaque" x="59" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora2}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora2}).intValue() <= $P{turno2_fin}.intValue()
@@ -1108,7 +1235,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-45" positionType="FixRelativeToBottom" mode="Opaque" x="81" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-45" positionType="FixRelativeToBottom" mode="Opaque" x="81" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora3}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora3}).intValue() <= $P{turno2_fin}.intValue()
@@ -1119,7 +1246,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-44" positionType="FixRelativeToBottom" mode="Opaque" x="103" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-44" positionType="FixRelativeToBottom" mode="Opaque" x="103" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora4}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora4}).intValue() <= $P{turno2_fin}.intValue()
@@ -1130,7 +1257,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-43" positionType="FixRelativeToBottom" mode="Opaque" x="125" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-43" positionType="FixRelativeToBottom" mode="Opaque" x="125" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora5}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora5}).intValue() <= $P{turno2_fin}.intValue()
@@ -1141,7 +1268,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-42" positionType="FixRelativeToBottom" mode="Opaque" x="147" y="121" width="22" height="14" isRemoveLineWhenBlank="true" backcolor="#CFCFCF">
+					<reportElement key="turno2-42" positionType="FixRelativeToBottom" mode="Opaque" x="147" y="153" width="22" height="11" isRemoveLineWhenBlank="true" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora6}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora6}).intValue() <= $P{turno2_fin}.intValue()
@@ -1152,7 +1279,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-41" positionType="FixRelativeToBottom" mode="Opaque" x="169" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-41" positionType="FixRelativeToBottom" mode="Opaque" x="169" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora7}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora7}).intValue() <= $P{turno2_fin}.intValue()
@@ -1163,7 +1290,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-40" positionType="FixRelativeToBottom" mode="Opaque" x="191" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-40" positionType="FixRelativeToBottom" mode="Opaque" x="191" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora8}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora8}).intValue() <= $P{turno2_fin}.intValue()
@@ -1174,7 +1301,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-39" positionType="FixRelativeToBottom" mode="Opaque" x="213" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-39" positionType="FixRelativeToBottom" mode="Opaque" x="213" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora9}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora9}).intValue() <= $P{turno2_fin}.intValue()
@@ -1185,7 +1312,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-38" positionType="FixRelativeToBottom" mode="Opaque" x="235" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-38" positionType="FixRelativeToBottom" mode="Opaque" x="235" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora10}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora10}).intValue() <= $P{turno2_fin}.intValue()
@@ -1196,7 +1323,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-37" positionType="FixRelativeToBottom" mode="Opaque" x="257" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-37" positionType="FixRelativeToBottom" mode="Opaque" x="257" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora11}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora11}).intValue() <= $P{turno2_fin}.intValue()
@@ -1207,7 +1334,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-36" positionType="FixRelativeToBottom" mode="Opaque" x="279" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-36" positionType="FixRelativeToBottom" mode="Opaque" x="279" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora12}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora12}).intValue() <= $P{turno2_fin}.intValue()
@@ -1218,7 +1345,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-35" positionType="FixRelativeToBottom" mode="Opaque" x="301" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-35" positionType="FixRelativeToBottom" mode="Opaque" x="301" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora13}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora13}).intValue() <= $P{turno2_fin}.intValue()
@@ -1229,7 +1356,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-34" positionType="FixRelativeToBottom" mode="Opaque" x="323" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-34" positionType="FixRelativeToBottom" mode="Opaque" x="323" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora14}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora14}).intValue() <= $P{turno2_fin}.intValue()
@@ -1240,7 +1367,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-33" positionType="FixRelativeToBottom" mode="Opaque" x="345" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-33" positionType="FixRelativeToBottom" mode="Opaque" x="345" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora15}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora15}).intValue() <= $P{turno2_fin}.intValue()
@@ -1251,7 +1378,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-32" positionType="FixRelativeToBottom" mode="Opaque" x="368" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-32" positionType="FixRelativeToBottom" mode="Opaque" x="368" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora16}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora16}).intValue() <= $P{turno2_fin}.intValue()
@@ -1262,7 +1389,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-31" positionType="FixRelativeToBottom" mode="Opaque" x="390" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-31" positionType="FixRelativeToBottom" mode="Opaque" x="390" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora17}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora17}).intValue() <= $P{turno2_fin}.intValue()
@@ -1273,7 +1400,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-30" positionType="FixRelativeToBottom" mode="Opaque" x="412" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-30" positionType="FixRelativeToBottom" mode="Opaque" x="412" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora18}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora18}).intValue() <= $P{turno2_fin}.intValue()
@@ -1284,7 +1411,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-29" positionType="FixRelativeToBottom" mode="Opaque" x="434" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-29" positionType="FixRelativeToBottom" mode="Opaque" x="434" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora19}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora19}).intValue() <= $P{turno2_fin}.intValue()
@@ -1295,7 +1422,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-28" positionType="FixRelativeToBottom" mode="Opaque" x="455" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-28" positionType="FixRelativeToBottom" mode="Opaque" x="455" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora20}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora20}).intValue() <= $P{turno2_fin}.intValue()
@@ -1306,7 +1433,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-27" positionType="FixRelativeToBottom" mode="Opaque" x="477" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-27" positionType="FixRelativeToBottom" mode="Opaque" x="477" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora21}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora21}).intValue() <= $P{turno2_fin}.intValue()
@@ -1317,7 +1444,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-26" positionType="FixRelativeToBottom" mode="Opaque" x="499" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-26" positionType="FixRelativeToBottom" mode="Opaque" x="499" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora22}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora22}).intValue() <= $P{turno2_fin}.intValue()
@@ -1328,7 +1455,7 @@
 					</graphicElement>
 				</rectangle>
 				<rectangle>
-					<reportElement key="turno2-25" positionType="FixRelativeToBottom" mode="Opaque" x="521" y="121" width="22" height="14" backcolor="#CFCFCF">
+					<reportElement key="turno2-25" positionType="FixRelativeToBottom" mode="Opaque" x="521" y="153" width="22" height="11" backcolor="#CFCFCF">
 						<printWhenExpression><![CDATA[new Boolean(
 	Integer.valueOf($F{hora23}).intValue() >= $P{turno2_inicio}.intValue() &&
 	Integer.valueOf($F{hora23}).intValue() <= $P{turno2_fin}.intValue()
@@ -1339,7 +1466,7 @@
 					</graphicElement>
 				</rectangle>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-1" positionType="FixRelativeToBottom" mode="Transparent" x="15" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-1" positionType="FixRelativeToBottom" mode="Transparent" x="15" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1352,7 +1479,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora0}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-2" positionType="FixRelativeToBottom" mode="Transparent" x="37" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-2" positionType="FixRelativeToBottom" mode="Transparent" x="37" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1365,7 +1492,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora1}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-3" positionType="FixRelativeToBottom" mode="Transparent" x="59" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-3" positionType="FixRelativeToBottom" mode="Transparent" x="59" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1378,7 +1505,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora2}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-4" positionType="FixRelativeToBottom" mode="Transparent" x="81" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-4" positionType="FixRelativeToBottom" mode="Transparent" x="81" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1391,7 +1518,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora3}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-5" positionType="FixRelativeToBottom" mode="Transparent" x="125" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-5" positionType="FixRelativeToBottom" mode="Transparent" x="125" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1404,7 +1531,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora5}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-6" positionType="FixRelativeToBottom" mode="Transparent" x="147" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-6" positionType="FixRelativeToBottom" mode="Transparent" x="147" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1417,7 +1544,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora6}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-7" positionType="FixRelativeToBottom" mode="Transparent" x="169" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-7" positionType="FixRelativeToBottom" mode="Transparent" x="169" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1430,7 +1557,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora7}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-8" positionType="FixRelativeToBottom" mode="Transparent" x="213" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-8" positionType="FixRelativeToBottom" mode="Transparent" x="213" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1443,7 +1570,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora9}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-9" positionType="FixRelativeToBottom" mode="Transparent" x="235" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-9" positionType="FixRelativeToBottom" mode="Transparent" x="235" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1456,7 +1583,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora10}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-10" positionType="FixRelativeToBottom" mode="Transparent" x="257" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-10" positionType="FixRelativeToBottom" mode="Transparent" x="257" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1469,7 +1596,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora11}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-11" positionType="FixRelativeToBottom" mode="Transparent" x="301" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-11" positionType="FixRelativeToBottom" mode="Transparent" x="301" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1482,7 +1609,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora13}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-12" positionType="FixRelativeToBottom" mode="Transparent" x="323" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-12" positionType="FixRelativeToBottom" mode="Transparent" x="323" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1495,7 +1622,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora14}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-13" positionType="FixRelativeToBottom" mode="Transparent" x="345" y="121" width="22" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+					<reportElement key="turno1-13" positionType="FixRelativeToBottom" mode="Transparent" x="345" y="153" width="22" height="11" forecolor="#000000" backcolor="#FFFFFF"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1508,7 +1635,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora15}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-14" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-14" positionType="FixRelativeToBottom" mode="Transparent" x="389" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1521,7 +1648,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora17}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-15" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-15" positionType="FixRelativeToBottom" mode="Transparent" x="411" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1534,7 +1661,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora18}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-16" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-16" positionType="FixRelativeToBottom" mode="Transparent" x="433" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1547,7 +1674,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora19}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-17" positionType="FixRelativeToBottom" mode="Transparent" x="477" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-17" positionType="FixRelativeToBottom" mode="Transparent" x="477" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1560,7 +1687,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora21}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-18" positionType="FixRelativeToBottom" mode="Transparent" x="499" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-18" positionType="FixRelativeToBottom" mode="Transparent" x="499" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1573,7 +1700,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora22}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-19" positionType="FixRelativeToBottom" mode="Transparent" x="521" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-19" positionType="FixRelativeToBottom" mode="Transparent" x="521" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1586,7 +1713,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora23}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-20" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-20" positionType="FixRelativeToBottom" mode="Transparent" x="455" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1599,7 +1726,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora20}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-21" positionType="FixRelativeToBottom" mode="Transparent" x="367" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-21" positionType="FixRelativeToBottom" mode="Transparent" x="367" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1612,7 +1739,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora16}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-22" positionType="FixRelativeToBottom" mode="Transparent" x="279" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-22" positionType="FixRelativeToBottom" mode="Transparent" x="279" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1625,7 +1752,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora12}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-23" positionType="FixRelativeToBottom" mode="Transparent" x="191" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-23" positionType="FixRelativeToBottom" mode="Transparent" x="191" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1638,7 +1765,7 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora8}]]></textFieldExpression>
 				</textField>
 				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="turno1-24" positionType="FixRelativeToBottom" mode="Transparent" x="103" y="121" width="22" height="14" forecolor="#000000" backcolor="#CCCCCC"/>
+					<reportElement key="turno1-24" positionType="FixRelativeToBottom" mode="Transparent" x="103" y="153" width="22" height="11" forecolor="#000000" backcolor="#CCCCCC"/>
 					<box>
 						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
@@ -1650,123 +1777,8 @@
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora4}]]></textFieldExpression>
 				</textField>
-				<textField pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-54" mode="Transparent" x="57" y="21" width="138" height="17" forecolor="#000000" backcolor="#FFFFFF"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
-						<font fontName="Liberation Sans" size="13" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{apellidoPaciente}]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement key="line-13" positionType="Float" mode="Opaque" x="1" y="39" width="549" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
-					<graphicElement fill="Solid">
-						<pen lineWidth="0.5" lineStyle="Solid"/>
-					</graphicElement>
-				</line>
-				<textField pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-55" positionType="Float" mode="Transparent" x="250" y="20" width="161" height="17" forecolor="#000000" backcolor="#FFFFFF"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
-						<font fontName="Liberation Sans" size="13" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{nombrePaciente}+" ("+$F{nhc}+")"]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement key="line-13" positionType="Float" mode="Opaque" x="2" y="54" width="548" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
-					<graphicElement fill="Solid">
-						<pen lineWidth="0.5" lineStyle="Solid"/>
-					</graphicElement>
-				</line>
-				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-56" positionType="Float" mode="Transparent" x="45" y="40" width="46" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
-						<font fontName="Liberation Sans" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{cama}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
-					<reportElement key="textField-61" positionType="Float" mode="Transparent" x="459" y="23" width="58" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None" lineSpacing="Single">
-						<font fontName="Liberation Sans" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaNacimiento}]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement key="line-13" positionType="Float" mode="Opaque" x="2" y="69" width="548" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
-					<graphicElement fill="Solid">
-						<pen lineWidth="0.5" lineStyle="Solid"/>
-					</graphicElement>
-				</line>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="textField-65" positionType="Float" x="59" y="56" width="188" height="13"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement verticalAlignment="Bottom">
-						<font fontName="Liberation Sans" isBold="true" pdfFontName="Helvetica-Bold"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{nombreCompletoMedico}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
-					<reportElement key="textField-66" positionType="Float" x="128" y="40" width="36" height="13"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					</box>
-					<textElement verticalAlignment="Bottom">
-						<font fontName="Liberation Sans" isBold="true" pdfFontName="Helvetica-Bold"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[$F{codigoUnidadEnfermeria}]]></textFieldExpression>
-				</textField>
-				<textField pattern="" isBlankWhenNull="false">
-					<reportElement key="element-71" mode="Opaque" x="257" y="72" width="68" height="10" forecolor="#000000" backcolor="#FFFFFF"/>
-					<box>
-						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#FFFFFF"/>
-					</box>
-					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
-						<font fontName="Liberation Sans" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
-					</textElement>
-					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("amb.diagnostico")]]></textFieldExpression>
-				</textField>
-				<line>
-					<reportElement key="line-9" positionType="Float" mode="Opaque" x="14" y="97" width="529" height="1" forecolor="#000000" backcolor="#FFFFFF"/>
-					<graphicElement fill="Solid">
-						<pen lineWidth="0.5" lineStyle="Solid"/>
-					</graphicElement>
-				</line>
-				<image>
-					<reportElement x="1" y="2" width="552" height="68"/>
+				<image vAlign="Middle">
+					<reportElement x="0" y="0" width="553" height="166"/>
 					<imageExpression class="java.lang.String"><![CDATA[$P{dir_images} + "NoValidado.png"]]></imageExpression>
 				</image>
 			</band>
@@ -1832,11 +1844,11 @@
 				<subreportParameter name="hora3">
 					<subreportParameterExpression><![CDATA[$F{hora3}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="turno2_inicio">
-					<subreportParameterExpression><![CDATA[$P{turno2_inicio}]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="hora2">
 					<subreportParameterExpression><![CDATA[$F{hora2}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="turno2_inicio">
+					<subreportParameterExpression><![CDATA[$P{turno2_inicio}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="hora5">
 					<subreportParameterExpression><![CDATA[$F{hora5}]]></subreportParameterExpression>
@@ -1907,6 +1919,33 @@
 				<dataSourceExpression><![CDATA[$F{prescripcionesCDS}]]></dataSourceExpression>
 				<subreportExpression class="java.lang.String"><![CDATA[$P{dir_reports}+$P{sub_tab0}+".jasper"]]></subreportExpression>
 			</subreport>
+			<frame>
+				<reportElement key="frame-2" positionType="Float" x="15" y="123" width="526" height="28"/>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+					<reportElement key="textField-78" positionType="Float" x="4" y="3" width="517" height="14" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="Liberation Sans" size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceListadosProperties("du.notasEnfTrata")+":"]]></textFieldExpression>
+				</textField>
+				<subreport>
+					<reportElement positionType="Float" x="4" y="19" width="519" height="5"/>
+					<dataSourceExpression><![CDATA[$F{notasEnfermeriaCDS}]]></dataSourceExpression>
+					<subreportExpression class="java.lang.String"><![CDATA[$P{dir_reports}+$P{sub_tab4}+".jasper"]]></subreportExpression>
+				</subreport>
+			</frame>
 			<subreport isUsingCache="true" runToBottom="false">
 				<reportElement key="element-53" positionType="Float" mode="Transparent" x="13" y="46" width="530" height="20" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF">
 					<printWhenExpression><![CDATA[$F{mostrarCuidadosDietas}]]></printWhenExpression>
@@ -1939,7 +1978,7 @@
 				<textFieldExpression class="java.lang.String"><![CDATA[TextProperties.traduceGralProperties("HojaPrescripcionMedica.dietas")]]></textFieldExpression>
 			</textField>
 			<textField pattern="" isBlankWhenNull="false">
-				<reportElement key="element-30" positionType="Float" mode="Opaque" x="13" y="20" width="530" height="17" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF">
+				<reportElement key="element-30" positionType="Float" mode="Opaque" x="13" y="23" width="530" height="17" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#FFFFFF">
 					<printWhenExpression><![CDATA[$F{mostrarCuidadosDietas}]]></printWhenExpression>
 				</reportElement>
 				<box>
