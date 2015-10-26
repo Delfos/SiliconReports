@@ -1778,7 +1778,13 @@
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{hora4}]]></textFieldExpression>
 				</textField>
 				<image vAlign="Middle">
-					<reportElement x="0" y="0" width="553" height="166"/>
+					<reportElement x="0" y="0" width="553" height="166">
+						<printWhenExpression><![CDATA[Boolean.valueOf(((new SimpleDateFormat("dd/MM/yy, HH")).
+    parse($P{fecha_listado_truncado_hasta_minutos})).
+    compareTo(new SimpleDateFormat("dd/MM/yy, HH").parse($F{validado}))
+    > 0 )
+    ]]></printWhenExpression>
+					</reportElement>
 					<imageExpression class="java.lang.String"><![CDATA[$P{dir_images} + "NoValidado.png"]]></imageExpression>
 				</image>
 			</band>
@@ -1844,11 +1850,11 @@
 				<subreportParameter name="hora3">
 					<subreportParameterExpression><![CDATA[$F{hora3}]]></subreportParameterExpression>
 				</subreportParameter>
-				<subreportParameter name="hora2">
-					<subreportParameterExpression><![CDATA[$F{hora2}]]></subreportParameterExpression>
-				</subreportParameter>
 				<subreportParameter name="turno2_inicio">
 					<subreportParameterExpression><![CDATA[$P{turno2_inicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="hora2">
+					<subreportParameterExpression><![CDATA[$F{hora2}]]></subreportParameterExpression>
 				</subreportParameter>
 				<subreportParameter name="hora5">
 					<subreportParameterExpression><![CDATA[$F{hora5}]]></subreportParameterExpression>
