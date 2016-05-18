@@ -1,0 +1,6 @@
+<configuration version="v1" type="standard" domainDB="1" codeReference="1" code="INT001" active="true" format="PDF EXCEL TXT">
+  <groupParameters>
+    <searchParameter code="SEARCH_DATE.FROM" column="inter.fecha" mandatory="true" default="" type="Date" operator="&gt;="/>
+    <searchParameter code="SEARCH_DATE.UNTIL" column="inter.fecha" mandatory="true" default="" type="Date" operator="&lt;="/>
+  </groupParameters>
+</configuration>

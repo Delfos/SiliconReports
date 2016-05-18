@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="INT001" printOrder="Horizontal" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="62"/>
+	<property name="ireport.y" value="21"/>
+	<style name="table" isDefault="false">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" isDefault="false" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" isDefault="false" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" isDefault="false" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1" isDefault="false">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" isDefault="false" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" isDefault="false" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" isDefault="false" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Intervenciones">
+		<queryString language="SQL">
+			<![CDATA[SELECT inter.intervencion_id, inter.prescripcion_fk, inter.prescripcioninicial_fk, inter.fecha as INTERVENCION_FECHA, PA.NHC AS NHC, ING.ICU, ing.etcid,
+ING.fechaingreso as fec, concat(PA.APELLIDO,CONCAT(',',PA.NOMBRE)) pacient, tp.tipotratamiento tipus, pa.fechanacimiento neix, pa.sexo sexe ,SV.CODIGO SERVEI_CODI,
+SV.DESCRIPCION SERVEI_DESC ,UE.CODIGO AS UNITATINF_CODI,UE.DESCRIPCION UNITATINF_DESC ,INTER.INTERVENCIONTIPO_CODIGO, inter.intervenciontipo_descripcion,
+inter.intervenciontipo_altid1, inter.observacionintervencion ,inter.intervencionprm_codigo, inter.intervencionprm_descripcion, inter.intervencionprm_altid1,
+inter.observacionprm ,inter.intervencionestado_codigo, inter.intervencionestado_descripcion, inter.intervencionestado_altid1, inter.observacionestado ,
+usr.descripcion usuari, usr.login, usr.grupo_descripcion perfil
+	FROM EDU_TRATAMIENTOPACIENTE TP INNER JOIN EDU_PACIENTE PA ON TP.PACIENTE_FK = PA.PACIENTE_ID INNER JOIN EDU_INGRESO ING ON TP.TRATAMIENTO_ID = ING.INGRESOS_ID
+	INNER JOIN EDU_SERVICIO SV ON ING.SERVICIO_FK=SV.SERVICIO_ID INNER JOIN EDU_UNIDADENFERMERIA UE ON ING.UNIDADENFERMERIA_FK=UE.UNIDADENFERMERIA_ID LEFT OUTER JOIN EDU_INTERVENCION
+	INTER ON TP.TRATAMIENTO_ID=inter.tratamiento_fk INNER JOIN edu_usuario usr on inter.usuario_fk=usr.usuario_id where ING.fechaingreso
+	between to_date('01/01/2014', 'DD/MM/YYYY') and to_date('31/12/2014', 'DD/MM/YYYY') UNION
+	SELECT inter.intervencion_id, inter.prescripcion_fk, inter.prescripcioninicial_fk, inter.fecha as INTERVENCION_FECHA, PA.NHC AS NHC, AM.ICU, AM.etcid,
+	AM.fechaingreso as fec, concat(PA.APELLIDO,CONCAT(',',PA.NOMBRE)) pacient, tp.tipotratamiento tipus, pa.fechanacimiento neix, pa.sexo sexe ,SV.CODIGO SERVEI_CODI,
+	SV.DESCRIPCION SERVEI_DESC ,UE.CODIGO AS UNITATINF_CODI,UE.DESCRIPCION UNITATINF_DESC ,INTER.INTERVENCIONTIPO_CODIGO, inter.intervenciontipo_descripcion,
+	inter.intervenciontipo_altid1, inter.observacionintervencion ,inter.intervencionprm_codigo, inter.intervencionprm_descripcion, inter.intervencionprm_altid1,
+	inter.observacionprm ,inter.intervencionestado_codigo, inter.intervencionestado_descripcion, inter.intervencionestado_altid1, inter.observacionestado ,usr.descripcion usuari,
+	usr.login, usr.grupo_descripcion perfil
+	FROM EDU_TRATAMIENTOPACIENTE TP INNER JOIN EDU_PACIENTE PA ON TP.PACIENTE_FK = PA.PACIENTE_ID INNER JOIN EDU_AMBULATORIO AM ON TP.TRATAMIENTO_ID = AM.AMBULATORIO_FK_ID
+	INNER JOIN EDU_SERVICIO SV ON AM.SERVICIO_FK=SV.SERVICIO_ID INNER JOIN EDU_UNIDADENFERMERIA UE ON AM.UNIDADENFERMERIA_FK=UE.UNIDADENFERMERIA_ID LEFT OUTER JOIN
+	EDU_INTERVENCION INTER ON TP.TRATAMIENTO_ID=inter.tratamiento_fk INNER JOIN edu_usuario usr on inter.usuario_fk=usr.usuario_id
+	where AM.fechaingreso between to_date('01/01/2015', 'DD/MM/YYYY') and to_date('31/12/2015', 'DD/MM/YYYY') order by fec]]>
+		</queryString>
+		<field name="LOGIN" class="java.lang.String"/>
+		<field name="NHC" class="java.lang.String"/>
+		<field name="ICU" class="java.lang.String"/>
+		<field name="INTERVENCION_FECHA" class="java.sql.Timestamp"/>
+		<field name="INTERVENCIONTIPO_CODIGO" class="java.lang.String"/>
+		<field name="INTERVENCIONTIPO_DESCRIPCION" class="java.lang.String"/>
+		<group name="LOGIN">
+			<groupExpression><![CDATA[$F{LOGIN}]]></groupExpression>
+		</group>
+		<group name="NHC">
+			<groupExpression><![CDATA[$F{NHC}]]></groupExpression>
+		</group>
+		<group name="ICU">
+			<groupExpression><![CDATA[$F{ICU}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Table Dataset 1"/>
+	<queryString>
+		<![CDATA[SELECT inter.intervencion_id, inter.prescripcion_fk, inter.prescripcioninicial_fk, inter.fecha as INTERVENCION_FECHA, PA.NHC AS NHC, ING.ICU, ing.etcid,
+	ING.fechaingreso as fec, concat(PA.APELLIDO,CONCAT(',',PA.NOMBRE)) pacient, tp.tipotratamiento tipus, pa.fechanacimiento neix, pa.sexo sexe ,
+	SV.CODIGO SERVEI_CODI,SV.DESCRIPCION SERVEI_DESC ,UE.CODIGO AS UNITATINF_CODI,UE.DESCRIPCION UNITATINF_DESC ,INTER.INTERVENCIONTIPO_CODIGO,
+	inter.intervenciontipo_descripcion, inter.intervenciontipo_altid1, inter.observacionintervencion ,inter.intervencionprm_codigo, inter.intervencionprm_descripcion,
+	inter.intervencionprm_altid1, inter.observacionprm ,inter.intervencionestado_codigo, inter.intervencionestado_descripcion, inter.intervencionestado_altid1,
+	inter.observacionestado ,usr.descripcion usuari, usr.login, usr.grupo_descripcion perfil
+FROM EDU_TRATAMIENTOPACIENTE TP INNER JOIN EDU_PACIENTE PA ON TP.PACIENTE_FK = PA.PACIENTE_ID INNER JOIN EDU_INGRESO ING ON TP.TRATAMIENTO_ID = ING.INGRESOS_ID
+	INNER JOIN EDU_SERVICIO SV ON ING.SERVICIO_FK=SV.SERVICIO_ID INNER JOIN EDU_UNIDADENFERMERIA UE ON ING.UNIDADENFERMERIA_FK=UE.UNIDADENFERMERIA_ID
+	LEFT OUTER JOIN EDU_INTERVENCION INTER ON TP.TRATAMIENTO_ID=inter.tratamiento_fk INNER JOIN edu_usuario usr on inter.usuario_fk=usr.usuario_id
+UNION
+	SELECT inter.intervencion_id, inter.prescripcion_fk, inter.prescripcioninicial_fk, inter.fecha as INTERVENCION_FECHA, PA.NHC AS NHC, AM.ICU, AM.etcid, AM.fechaingreso as fec,
+	concat(PA.APELLIDO,CONCAT(',',PA.NOMBRE)) pacient, tp.tipotratamiento tipus, pa.fechanacimiento neix, pa.sexo sexe ,SV.CODIGO SERVEI_CODI,SV.DESCRIPCION SERVEI_DESC ,
+	UE.CODIGO AS UNITATINF_CODI,UE.DESCRIPCION UNITATINF_DESC ,INTER.INTERVENCIONTIPO_CODIGO, inter.intervenciontipo_descripcion, inter.intervenciontipo_altid1,
+	inter.observacionintervencion ,inter.intervencionprm_codigo, inter.intervencionprm_descripcion, inter.intervencionprm_altid1, inter.observacionprm ,
+	inter.intervencionestado_codigo, inter.intervencionestado_descripcion, inter.intervencionestado_altid1, inter.observacionestado ,usr.descripcion usuari,
+	usr.login, usr.grupo_descripcion perfil
+FROM EDU_TRATAMIENTOPACIENTE TP INNER JOIN EDU_PACIENTE PA ON TP.PACIENTE_FK = PA.PACIENTE_ID INNER JOIN EDU_AMBULATORIO AM ON TP.TRATAMIENTO_ID = AM.AMBULATORIO_FK_ID
+	INNER JOIN EDU_SERVICIO SV ON AM.SERVICIO_FK=SV.SERVICIO_ID INNER JOIN EDU_UNIDADENFERMERIA UE ON AM.UNIDADENFERMERIA_FK=UE.UNIDADENFERMERIA_ID
+	LEFT OUTER JOIN EDU_INTERVENCION INTER ON TP.TRATAMIENTO_ID=inter.tratamiento_fk
+	INNER JOIN edu_usuario usr on inter.usuario_fk=usr.usuario_id]]>
+	</queryString>
+	<field name="INTERVENCION_ID" class="java.math.BigDecimal"/>
+	<field name="PRESCRIPCION_FK" class="java.math.BigDecimal"/>
+	<field name="PRESCRIPCIONINICIAL_FK" class="java.math.BigDecimal"/>
+	<field name="INTERVENCION_FECHA" class="java.sql.Timestamp"/>
+	<field name="NHC" class="java.lang.String"/>
+	<field name="ICU" class="java.lang.String"/>
+	<field name="ETCID" class="java.lang.String"/>
+	<field name="FEC" class="java.sql.Timestamp"/>
+	<field name="PACIENT" class="java.lang.String"/>
+	<field name="TIPUS" class="java.lang.String"/>
+	<field name="NEIX" class="java.sql.Timestamp"/>
+	<field name="SEXE" class="java.lang.String"/>
+	<field name="SERVEI_CODI" class="java.lang.String"/>
+	<field name="SERVEI_DESC" class="java.lang.String"/>
+	<field name="UNITATINF_CODI" class="java.lang.String"/>
+	<field name="UNITATINF_DESC" class="java.lang.String"/>
+	<field name="INTERVENCIONTIPO_CODIGO" class="java.lang.String"/>
+	<field name="INTERVENCIONTIPO_DESCRIPCION" class="java.lang.String"/>
+	<field name="INTERVENCIONTIPO_ALTID1" class="java.lang.String"/>
+	<field name="OBSERVACIONINTERVENCION" class="java.lang.String"/>
+	<field name="INTERVENCIONPRM_CODIGO" class="java.lang.String"/>
+	<field name="INTERVENCIONPRM_DESCRIPCION" class="java.lang.String"/>
+	<field name="INTERVENCIONPRM_ALTID1" class="java.lang.String"/>
+	<field name="OBSERVACIONPRM" class="java.lang.String"/>
+	<field name="INTERVENCIONESTADO_CODIGO" class="java.lang.String"/>
+	<field name="INTERVENCIONESTADO_DESCRIPCION" class="java.lang.String"/>
+	<field name="INTERVENCIONESTADO_ALTID1" class="java.lang.String"/>
+	<field name="OBSERVACIONESTADO" class="java.lang.String"/>
+	<field name="USUARI" class="java.lang.String"/>
+	<field name="LOGIN" class="java.lang.String"/>
+	<field name="PERFIL" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="29" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="236" height="20"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Intervenciones en tratamientos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="115" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Login]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="115" y="2" width="97" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NHC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="212" y="2" width="74" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ICU]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="493" y="2" width="47" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="540" y="2" width="36" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="582" y="2" width="204" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="24" width="802" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="286" y="2" width="42" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="435" y="2" width="54" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="328" y="2" width="107" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha nacimiento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="4" width="115" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{LOGIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="115" y="4" width="97" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NHC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="4" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{ICU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="543" y="4" width="36" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{INTERVENCIONPRM_CODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="582" y="4" width="204" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{INTERVENCIONTIPO_DESCRIPCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="4" width="36" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SEXE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="4" width="107" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{FEC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="4" width="54" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{SERVEI_CODI}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="493" y="4" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{NEIX}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="586" y="5" width="91" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fecha de impresión: ]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="680" y="5" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm">
+				<reportElement x="735" y="5" width="51" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="469" y="5" width="53" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
